@@ -1,8 +1,6 @@
 package homeAutomation.RemoteControl;
 
-public class noCommand implements Command{
-
-	public noCommand() {}
+public class NoCommand implements Command{
 	
 	public void excute() {}
 	
