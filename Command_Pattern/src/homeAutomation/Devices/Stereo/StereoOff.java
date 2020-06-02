@@ -5,7 +5,7 @@ import homeAutomation.RemoteControl.Command;
 public class StereoOff implements Command{
 	Stereo stereo;
 	
-	public StereoOff(Stereo sterso){
+	public StereoOff(Stereo stereo){
 		this.stereo = stereo;
 	}
 	

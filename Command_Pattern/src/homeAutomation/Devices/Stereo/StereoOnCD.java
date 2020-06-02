@@ -5,7 +5,7 @@ import homeAutomation.RemoteControl.Command;
 public class StereoOnCD implements Command{
 	Stereo stereo;
 	
-	public StereoOnCD(Stereo sterso){
+	public StereoOnCD(Stereo stereo){
 		this.stereo = stereo;
 	}
 	
