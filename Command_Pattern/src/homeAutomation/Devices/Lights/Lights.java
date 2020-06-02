@@ -14,12 +14,12 @@ public class Lights {
 	
 	public void on() {
 		brightness = ON;
-		System.out.println("Lights are " + brightness);
+		// System.out.println("Lights are " + brightness);
 	}
 	
 	public void off() {
 		brightness = OFF;
-		System.out.println("Lights are " + brightness);
+		// System.out.println("Lights are " + brightness);
 	}
 	
 }
