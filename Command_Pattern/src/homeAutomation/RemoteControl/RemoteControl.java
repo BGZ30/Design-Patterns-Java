@@ -7,12 +7,12 @@ public class RemoteControl {
 	
 	public RemoteControl() {
 		
-		onCommands = new Command[7]; // the remote have seven slots i.e devices'actions
-		offCommands = new Command[7];
+		onCommands = new Command[15]; // the remote have 15 slots i.e devices'actions
+		offCommands = new Command[15];
 		
 		// Initialize all commands to noCommand
 		Command noCommand = new NoCommand();
-		for(int i=0; i<7; i++) {
+		for(int i=0; i<15; i++) {
 			onCommands[i] = noCommand;
 			offCommands[i] = noCommand;
 		}
