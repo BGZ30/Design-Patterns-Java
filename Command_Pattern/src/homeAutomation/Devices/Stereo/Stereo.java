@@ -1,7 +1,7 @@
 package homeAutomation.Devices.Stereo;
 
 public class Stereo {
-
+	public static final int ON = 1;
 	public static final int OFF = 0;
 	int volume;
 		
@@ -10,7 +10,7 @@ public class Stereo {
 	}
 	
 	public void on() {
-
+		volume = ON;
 	}
 	
 	public void off() {
