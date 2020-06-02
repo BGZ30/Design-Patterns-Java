@@ -10,7 +10,7 @@ public class LightOff implements Command {
 	}
 	
 	public void excute() {
-		light.on();
+		light.off();
 	}
 	
 	public void undo() {
