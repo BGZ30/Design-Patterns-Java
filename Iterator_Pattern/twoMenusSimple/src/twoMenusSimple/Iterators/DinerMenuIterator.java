@@ -1,0 +1,26 @@
+package twoMenusSimple.Iterators;
+
+public class DinerMenuIterator implements Iterator{
+
+	MenuItem[] items;
+	int position = 0;
+	
+	public DinerMenuIterator(MenuItem[] items) {
+		this.items = items;
+	}
+	
+	public boolean hasNext() {
+		if(position >= items.length || items[position] == null)
+			return false;
+		else
+			return true;
+	}
+	
+	public Object next() {
+		MenuItem item = itmes[position];
+		position += 1;
+		
+		return item;
+	}
+
+}
