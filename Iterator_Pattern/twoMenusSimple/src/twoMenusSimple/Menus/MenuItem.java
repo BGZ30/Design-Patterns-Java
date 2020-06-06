@@ -19,7 +19,7 @@ public class MenuItem {
 		return name;
 	}
 	
-	public String description() {
+	public String getDescription() {
 		return description;
 	}
 	
