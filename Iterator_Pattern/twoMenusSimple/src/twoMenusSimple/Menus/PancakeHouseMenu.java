@@ -1,5 +1,7 @@
 package twoMenusSimple.Menus;
 
+import twoMenusSimple.Menus.*;
+import twoMenusSimple.Iterators.*;
 import java.util.ArrayList;
 
 public class PancakeHouseMenu{
@@ -31,7 +33,7 @@ public class PancakeHouseMenu{
 	}
 	
 	public void addItem(String name, String description, boolean vegetarian, double price) {
-		MenuItem item = new MenuITem(name, description, vegetarian, price);
+		MenuItem item = new MenuItem(name, description, vegetarian, price);
 		menuItems.add(item);
 	}
 	

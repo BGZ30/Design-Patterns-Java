@@ -1,5 +1,8 @@
 package twoMenusSimple.People;
 
+import twoMenusSimple.Menus.*;
+import twoMenusSimple.Iterators.*;
+
 public class Waitress {
 	PancakeHouseMenu pancakeHouseMenu;
 	DinerMenu dinerMenu;

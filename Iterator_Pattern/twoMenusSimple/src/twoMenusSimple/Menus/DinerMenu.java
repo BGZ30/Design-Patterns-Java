@@ -1,9 +1,11 @@
 package twoMenusSimple.Menus;
 
+import twoMenusSimple.Iterators.*;
+
 public class DinerMenu {
 	static final int MAX_ITEMS = 6;
 	int numOfItems = 0;
-	MenuItem[] menuItem;
+	MenuItem[] menuItems;
 	
 	public DinerMenu() {
 		menuItems = new MenuItem[MAX_ITEMS];
@@ -15,17 +17,17 @@ public class DinerMenu {
 	}
 	
 	public void addItem(String name, String description,boolean vegetarian, double price) {
-		if (numberOfItems >= MAX_ITEMS) {
+		if (numOfItems >= MAX_ITEMS) {
 			System.err.println("Sorry, menu is full! Can’t add item to menu");
 		} 
 		else {
 			MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
-			menuItems[numberOfItems] = menuItem;
+			menuItems[numOfItems] = menuItem;
 			numOfItems = numOfItems + 1;
 		}
 	}
 	
-	public Iterator CreateIterator() {
+	public Iterator createIterator() {
 		return new DinerMenuIterator(menuItems);
 	}
 }

@@ -1,5 +1,7 @@
 package twoMenusSimple.Iterators;
 
+import twoMenusSimple.Menus.*;
+
 public class DinerMenuIterator implements Iterator{
 
 	MenuItem[] items;
@@ -17,7 +19,7 @@ public class DinerMenuIterator implements Iterator{
 	}
 	
 	public Object next() {
-		MenuItem item = itmes[position];
+		MenuItem item = items[position];
 		position += 1;
 		
 		return item;
