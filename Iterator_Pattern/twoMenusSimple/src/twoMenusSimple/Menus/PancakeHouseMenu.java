@@ -3,7 +3,7 @@ package twoMenusSimple.Menus;
 import twoMenusSimple.Iterators.*;
 import java.util.ArrayList;
 
-public class PancakeHouseMenu{
+public class PancakeHouseMenu implements Menu{
 	
 	ArrayList<MenuItem> menuItems;
 	

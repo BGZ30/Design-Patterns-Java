@@ -2,7 +2,7 @@ package twoMenusSimple.Menus;
 
 import twoMenusSimple.Iterators.*;
 
-public class DinerMenu {
+public class DinerMenu implements Menu{
 	static final int MAX_ITEMS = 6;
 	int numOfItems = 0;
 	MenuItem[] menuItems;

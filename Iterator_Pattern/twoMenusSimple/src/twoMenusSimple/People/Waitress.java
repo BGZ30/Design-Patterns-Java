@@ -4,10 +4,15 @@ import twoMenusSimple.Menus.*;
 import twoMenusSimple.Iterators.*;
 
 public class Waitress {
+	/*
 	PancakeHouseMenu pancakeHouseMenu;
 	DinerMenu dinerMenu;
+	*/
+	Menu pancakeHouseMenu;
+	Menu dinerMenu;
 	
-	public Waitress(PancakeHouseMenu pancakeHouseMenu, DinerMenu dinerMenu) {
+	//public Waitress(PancakeHouseMenu pancakeHouseMenu, DinerMenu dinerMenu) {
+	public Waitress(Menu pancakeHouseMenu, Menu dinerMenu) {
 		this.pancakeHouseMenu = pancakeHouseMenu;
 		this.dinerMenu = dinerMenu;
 	}
