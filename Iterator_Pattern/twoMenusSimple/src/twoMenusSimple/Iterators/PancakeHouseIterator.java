@@ -1,44 +1,29 @@
 package twoMenusSimple.Iterators;
 
-import java.util.ArrayList;
+import twoMenusSimple.Menus.*;
 
-import twoMenusSimple.Menus.DinerMenuIterator;
+import java.util.ArrayList;
 
 public class PancakeHouseIterator implements Iterator{
 	
 	ArrayList<MenuItem> menuItems;
+	int position = 0;
 	
-	public PancakeHouseIterator() {
-		menuItems = new ArrayList<MenuItem>();
+	public PancakeHouseIterator(ArrayList<MenuItem> items) {
+		this.menuItems = items;
+	}
+	
+	public boolean hasNext() {
+		if(position >= menuItems.size())
+			return false;
+		else
+			return true;
+	}
+	
+	public Object next() {
+		MenuItem item = menuItems.get(position);
+		position += 1;
 		
-		addItem("K&B's Pancake Breakfast", 
-				"Pancakes with scrambled eggs, and toast", 
-				true,
-				2.99);
-	 
-		addItem("Regular Pancake Breakfast", 
-			"Pancakes with fried eggs, sausage", 
-			false,
-			2.99);
- 
-		addItem("Blueberry Pancakes",
-			"Pancakes made with fresh blueberries, and blueberry syrup",
-			true,
-			3.49);
- 
-		addItem("Waffles",
-			"Waffles, with your choice of blueberries or strawberries",
-			true,
-			3.59);
+		return item;
 	}
-	
-	public addItem(String name, String description, boolean vegetarian, double price) {
-		MenuItem item = new MenuITem(name, description, vegetarian, price);
-		menuItems.add(item);
-	}
-	
-	public Iterator createIterator() {
-		return PancakeHouseIterator(menuItems);
-	}
-
 }
