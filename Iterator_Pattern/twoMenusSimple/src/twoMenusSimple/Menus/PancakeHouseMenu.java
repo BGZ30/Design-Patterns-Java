@@ -1,6 +1,5 @@
 package twoMenusSimple.Menus;
 
-import twoMenusSimple.Menus.*;
 import twoMenusSimple.Iterators.*;
 import java.util.ArrayList;
 
@@ -38,7 +37,7 @@ public class PancakeHouseMenu{
 	}
 	
 	public Iterator createIterator() {
-		return PancakeHouseIterator(menuItems);
+		return new PancakeHouseIterator(menuItems);
 	}
 
 }
