@@ -30,7 +30,7 @@ public class Menu extends MenuComponent {
 		return name;
 	}
 	
-	public String description() {
+	public String getDescription() {
 		return description;
 	}
 
