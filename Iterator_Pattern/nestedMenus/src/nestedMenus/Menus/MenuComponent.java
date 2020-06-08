@@ -30,6 +30,8 @@ public abstract class MenuComponent {
 		throw new UnsupportedOperationException();
 	}
 	
+	public Iterator createIterator();  // will be implemented by all subclasses
+	
 	public void print() {
 		throw new UnsupportedOperationException();
 	}
