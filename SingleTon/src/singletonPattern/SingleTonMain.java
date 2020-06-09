@@ -7,6 +7,8 @@ public class SingleTonMain {
 		SingleTonLazy lazyObject1 = SingleTonLazy.getInstance();
 		SingleTonLazy lazyObject2 = SingleTonLazy.getInstance();
 		SingleTonLazy lazyObject3 = SingleTonLazy.getInstance();
+		
+		//SingleTonDoubleChecking ob = SingleTonDoubleChecking.getInstance();
 
 	}
 
