@@ -1,10 +1,11 @@
 package OOMachine.States;
+import OOMachine.MainAndTest.*;
 
 public class LuckyWinner implements State {
 
-	GumballMachine gumballMachine;
+	GumBallMachine gumballMachine;
 	
-	public public LuckyWinner(GumballMachine gumballMachine) {
+	public LuckyWinner(GumBallMachine gumballMachine) {
 		this.gumballMachine = gumballMachine;
 	}
 
@@ -20,15 +21,15 @@ public class LuckyWinner implements State {
 
 	@Override
 	public void turnCrank() {
-		System.out.println("Turning twice doesn’t get you another gumball!"");
+		System.out.println("Turning twice doesn’t get you another gumball!");
 	}
 
 	@Override
-	public void despense() {
+	public void dispense() {
 		System.out.println("YOU’RE A WINNER! You get two gumballs for your quarter");
 		gumballMachine.releaseBall();
 		
-		if (gumballMachine.getCount() == 0)
+		if (gumballMachine.getBalls() == 0)
 			gumballMachine.setState(gumballMachine.getSoldOutState());
 		
 		else{

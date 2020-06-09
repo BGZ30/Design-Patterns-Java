@@ -1,10 +1,12 @@
 package OOMachine.States;
 
+import OOMachine.MainAndTest.*;
+
 public class Sold implements State {
 
-	GumballMachine gumballMachine;
+	GumBallMachine gumballMachine;
 	
-	public Sold(GumballMachine gumballMachine) {
+	public Sold(GumBallMachine gumballMachine) {
 		this.gumballMachine = gumballMachine;
 	}
 
@@ -20,11 +22,11 @@ public class Sold implements State {
 
 	@Override
 	public void turnCrank() {
-		System.out.println("Turning twice doesn’t get you another gumball!"");
+		System.out.println("Turning twice doesn’t get you another gumball!");
 	}
 
 	@Override
-	public void despense() {
+	public void dispense() {
 		/*
 		 * release a gumball, and then check if there is any remaining gums;
 		 * if yes, then move to the NoQuarter state and wait for a new customer.
@@ -34,7 +36,8 @@ public class Sold implements State {
 		
 		if (gumballMachine.getBalls() > 0) {
 			gumballMachine.setState(gumballMachine.getNoQuarterState());
-		}else {
+		}
+		else {
 			System.out.println("Oops, out of gumballs!");
 			gumballMachine.setState(gumballMachine.getSoldOutState());
 		}

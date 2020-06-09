@@ -1,12 +1,15 @@
 package OOMachine.States;
 
+import OOMachine.MainAndTest.*;
+import java.util.*;
+
 public class hasQuarter implements State{
 
-	GumballMachine gumballMachine;
+	GumBallMachine gumballMachine;
 	Random randomWinner = new Random(System.currentTimeMillis());
 
-	public hasQuarter(GumballMachine gumballMachine) {
-		this.gumballMachine = gumballMachine
+	public hasQuarter(GumBallMachine gumballMachine) {
+		this.gumballMachine = gumballMachine;
 	}
 	
 	@Override
@@ -25,14 +28,14 @@ public class hasQuarter implements State{
 		System.out.println("You turned...");
 		int winner = randomWinner.nextInt(10);
 		
-		if ((winner == 0) && (gumballMachine.getCount() > 1))
+		if ((winner == 0) && (gumballMachine.getBalls() > 1))
 			gumballMachine.setState(gumballMachine.getWinnerState());
 		else
 			gumballMachine.setState(gumballMachine.getSoldState());
 	}
 
 	@Override
-	public void despense() {
+	public void dispense() {
 		System.out.println("No gumball despensed");
 	}
 

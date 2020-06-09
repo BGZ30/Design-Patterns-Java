@@ -1,10 +1,12 @@
 package OOMachine.States;
 
+import OOMachine.MainAndTest.*;
+
 public class SoldOut implements State {
 
-	GumballMachine gumballMachine;
+	GumBallMachine gumballMachine;
 	
-	public SoldOut(GumballMachine gumballMachine) {
+	public SoldOut(GumBallMachine gumballMachine) {
 		this.gumballMachine = gumballMachine;
 	}
 
@@ -24,7 +26,7 @@ public class SoldOut implements State {
 	}
 
 	@Override
-	public void despense() {
+	public void dispense() {
 		System.out.println("No gumball dispensed");
 	}
 

@@ -1,10 +1,12 @@
 package OOMachine.States;
 
+import OOMachine.MainAndTest.*;
+
 public class NoQuarter implements State {
 
-	GumballMachine gumballMachine;
+	GumBallMachine gumballMachine;
 	
-	public NoQuarter(GumballMachine gumballMachine) {
+	public NoQuarter(GumBallMachine gumballMachine) {
 		this.gumballMachine = gumballMachine;
 	}
 
@@ -25,7 +27,7 @@ public class NoQuarter implements State {
 	}
 
 	@Override
-	public void despense() {
+	public void dispense() {
 		System.out.println("You need to pay first");
 	}
 
